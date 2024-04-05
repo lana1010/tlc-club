@@ -6,7 +6,7 @@ const common = require('./common');
 
 // main web-application default parameters
 const DEFAULT_APP_HOST = 'localhost';
-const DEFAULT_APP_PORT = 80;
+const DEFAULT_APP_PORT = 5000;
 const IS_LOG_TO_FILE = false;
 const APP_LOG_LEVEL = 'DEBUG';
 const APP_LOG_DIR = __dirname + '/log/';

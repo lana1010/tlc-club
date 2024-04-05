@@ -1,10 +1,6 @@
 const nodemailer = require('nodemailer');
 //require('dotenv').config()
 
-console.log("SERVICE=", process.env.MAIL_SERVICE);
-console.log("MAIL_USER=", process.env.MAIL_USER);
-console.log("MAIL_PASSWORD=", process.env.MAIL_PASSWORD);
-
 const mailTransport = nodemailer.createTransport({
 	service: process.env.MAIL_SERVICE,
 	auth: {

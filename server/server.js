@@ -44,17 +44,14 @@ app.use(express.urlencoded({
 })); */
 
 
-
 // ********************************************
-// ***************** Start server *************
+// ************* Start/Stop server ************
 // ********************************************
 
 // the main app error handler
 app.use(function(err, req, res, next) {
     logger.error('Unhandled error occurred: ' + err);
-    console.log ("1. Are you here?")
     res.header("Content-Type", "text/html");
-    console.log ("2. Are you here?")
     res.send("Server error occurred");
 });
 
@@ -84,4 +81,13 @@ appServer.listen(appPort, () => {
 process.on('exit', function () {
     clearInterval(serverIntervalID);   
     logger.info('The application server stopped');
+});
+
+app.post('/stop', function(req, res, next) {
+    logger.debug('Closing of the application server connection...');
+    appServer.close();
+    setTimeout(() => { // exit the server process with delay
+        process.exit(0);
+    }, 1000);
+    res.send(JSON.stringify({ message: 'The application server stopped' })); 
 });
