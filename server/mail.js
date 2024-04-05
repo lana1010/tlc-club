@@ -9,15 +9,6 @@ const mailTransport = nodemailer.createTransport({
 	},
 });
 
-/*const mailTransport = nodemailer.createTransport({
-	service: 'Gmail',
-	auth: {
-		user: 'lana1010@gmail.com', // your Gmail address
-		pass: 'syij sdms dltq tckg ' // your Gmail password
-	}
-}); */
-
-
 const sendEmail = async (mailOptions) => {
     // Send email
     const info = await mailTransport.sendMail(mailOptions);
