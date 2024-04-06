@@ -35,11 +35,11 @@ a:focus {
 	margin-top: 20px;
 }
 
-/* Added margin-top: -10px; */
+/* Added margin-top: -20px; */
 .tm-logo-div { 
 	padding-top: 40px; 
 	padding-bottom: 40px;
-	margin-top: -10px;
+	margin-top: -20px;
 }
 
 .tm-main-nav { display: none; }
@@ -56,8 +56,8 @@ a:focus {
 .tm-section-title {	font-size: 2.2rem; }
 .tm-content-div { padding: 40px; }
 .tm-welcome-pic { padding-right: 40px;
-	              padding-left: 80px; 
-				  margin-bottom: -40px}
+	          padding-left: 80px; 
+		  margin-bottom: -40px}
 .tm-margin-b-45 { margin-bottom: 45px; }
 .tm-margin-b-30 { margin-bottom: 30px; }
 .tm-margin-b-5 { margin-bottom: 5px; }
